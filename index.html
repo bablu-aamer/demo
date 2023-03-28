@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>COCONUT THEORIES</title>
+    </head>
+    <style>
+        *{margin: 0;padding: 0;font-family: sans-serif;}
+        .banner{width: 100%;height: 120vh;background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://i.unu.edu/media/ourworld.unu.edu-en/article/4538/Videobriefs-19.jpg");background-size: cover;background-repeat: no-repeat;}
+        .nav{width:100%;height: 100px;display: flex;justify-content: space-between; align-items: center;margin: auto;padding: 0px 0px;position: fixed;background: rgba(0,0,0,0.25);}
+        .logo{font-size: 45px;color: azure;cursor: pointer;display: flex;}
+        .logo img{width: 55px;height: 50px;padding: 4px;border: 2px solid white;border-radius: 50px;margin-right: 10px;}
+        .navlinks ul{display: flex;align-items: center; justify-content: center;list-style: none;}
+        .navlinks ul li{display: inline-block;margin: 0 20;position:relative}
+        .navlinks ul li a{color: white;font-weight:550;text-decoration: none;}
+        .navlinks ul li::after{content: '';width: 0;height:3px;background: whitesmoke;position: absolute;left: 0;bottom: -5;transition: 0.3s;}
+        .navlinks ul li:hover::after{width: 100%;}
+        .content{margin-left: 100px;display: flex;justify-content: space-between;position: relative;top: 85;}
+        .about{width: 600px;height: 450px;margin: 100 150;color: white;display: flex;flex-direction: column;justify-content: center;}
+        .about h3{font-size: 35px;}
+        .about p{font-size: 20px;}
+        .form{width: 350px;padding-left: 25px;padding-right: 25px;padding-top: 25px;height: 575px;margin-top: 100px;margin-left: 75px;margin-right: 150px;background-color: rgba(0, 0, 0, 0.253); border-radius: 15px; box-shadow: 5px 5px 5px black;;}
+        .form h3{color: whitesmoke;font-size: 35;display: flex;justify-content: center;position: relative;cursor: pointer;}
+        input[type=text],input[type=email],input[type=number]{width: 350px;height: 30px;border-radius: 8px;border: 0px solid black;}
+        input[type=text],input[type=email],input[type=number]::placeholder{padding-left: 15px;}
+        .form label{color: white;}
+        .form select{width: 350px;height: 30px;border-radius: 8px;border: 0px solid black;}
+        input[type=submit]{width: 150px;height: 50px; background-color: whitesmoke;border-radius:50px;border: 1px solid black;margin-left: 100px;color: black;font-weight: 550;transition: 0.3s;margin-top: 5px;}
+        input[type=submit]:hover{font-size: 15px; background: yellowgreen;}
+        .form textarea{border-radius: 8px;border: 0px solid black;}
+        .form textarea::placeholder{padding-left: 15px; padding-top: 3px;}
+        .icons{display: flex;justify-content: center;padding-top: 0px;}
+        .icons ion-icon{color: white;padding: 25px;font-size: 25px;cursor: pointer;transition: 0.3s;margin-top: 15px;}
+        #whts:hover{color: #25d366; font-size: 35px;padding: 20px;}
+        #call:hover{color: red; font-size: 35px;padding: 20px;}
+        #msg:hover{color: dodgerblue; font-size: 35px;padding: 20px;}
+       @media (max-width:1080px){
+        .banner{width: 100%;height: 120vh;background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://i.unu.edu/media/ourworld.unu.edu-en/article/4538/Videobriefs-19.jpg");background-size: cover;background-repeat: no-repeat;}
+        .nav{width:100%;height: 100px;display: flex;justify-content: space-between; align-items: center;margin: auto;padding: 0px 0px;position: fixed;background: rgba(0,0,0,0.25);}
+        .logo{font-size: 35px;color: azure;cursor: pointer;display: flex;align-items: center;justify-content: center;}
+        .logo img{width: 45px;height: 40px;padding: 4px;border: 2px solid white;border-radius: 50px;margin-right: 10px;}
+        .navlinks ul{display: flex;align-items: center; justify-content: center;list-style: none;}
+        .navlinks ul li{display: inline-block;margin: 0 15;position:relative}
+        .navlinks ul li a{color: white;font-weight:550;text-decoration: none;}
+        .navlinks ul li::after{content: '';width: 0;height:3px;background: whitesmoke;position: absolute;left: 0;bottom: -5;transition: 0.3s;}
+        .navlinks ul li:hover::after{width: 100%;}
+        .content{margin-left: 100px;display: flex;justify-content: space-between;position: relative;top: 85;}
+        .about{width: 600px;height: 450px;margin: 100 150;color: white;display: flex;flex-direction: column;justify-content: center;}
+        .about h3{font-size: 35px;}
+        .about p{font-size: 20px;}
+        .form{width: 350px;padding-left: 25px;padding-right: 25px;padding-top: 25px;height: 575px;margin-top: 100px;margin-left: 75px;margin-right: 150px;background-color: rgba(0, 0, 0, 0.253); border-radius: 15px; box-shadow: 5px 5px 5px black;;}
+        .form h3{color: whitesmoke;font-size: 35;display: flex;justify-content: center;position: relative;cursor: pointer;}
+        input[type=text],input[type=email],input[type=number]{width: 350px;height: 30px;border-radius: 8px;border: 0px solid black;}
+        input[type=text],input[type=email],input[type=number]::placeholder{padding-left: 15px;}
+        .form label{color: white;}
+        .form select{width: 350px;height: 30px;border-radius: 8px;border: 0px solid black;}
+        input[type=submit]{width: 150px;height: 50px; background-color: whitesmoke;border-radius:50px;border: 1px solid black;margin-left: 100px;color: black;font-weight: 550;transition: 0.3s;margin-top: 5px;}
+        input[type=submit]:hover{font-size: 15px; background: yellowgreen;}
+        .form textarea{border-radius: 8px;border: 0px solid black;}
+        .form textarea::placeholder{padding-left: 15px; padding-top: 3px;}
+        .icons{display: flex;justify-content: center;padding-top: 0px;}
+        .icons ion-icon{color: white;padding: 25px;font-size: 25px;cursor: pointer;transition: 0.3s;margin-top: 15px;}
+        #whts:hover{color: #25d366; font-size: 35px;padding: 20px;}
+        #call:hover{color: red; font-size: 35px;padding: 20px;}
+        #msg:hover{color: dodgerblue; font-size: 35px;padding: 20px;}
+        
+       }
+    </style>
+
+    <body>
+        <div class="banner">
+            <div class="nav">
+                <div class="logo">
+                    <img src="https://i.pinimg.com/originals/32/da/28/32da281b0df10277b0cab12f4caa2b01.jpg"/>
+                    <h3>COCONUT THEORIES</h3>
+                </div>
+                <div class="navlinks">
+                    <ul>
+                        <li><a href="a">HOME</a></li>
+                        <li><a href="a">MENU</a></li>
+                        <li><a href="a">CONTACT US</a></li>
+                        <li><a href="a">BLOG</a></li>
+                        <li><a href="a">ABOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="about">
+                <h3>WELCOME <br>TO COCONUT THEORIES...!</h3><br>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit quia consequuntur fuga eaque quod. Voluptatibus ipsam, numquam dolorum suscipit magnam maiores labore reprehenderit, facilis ullam culpa omnis unde quisquam. Ipsum?</p><br><br>
+                <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, nihil illum iusto dolorem distinctio quod ipsam necessitatibus eius neque recusandae reprehenderit aliquid pariatur deserunt? Ipsam laborum maiores eos consequuntur velit!
+                </p>
+                </div>
+                <div class="form">
+                    <form>
+                    <h3>Order Now</h3><br>
+                    <label>ENTER NAME :</label><br>
+                    <input type="text" placeholder="Enter your Name"><br><br>
+                    <label>ENTER EMAIL :</label><br>
+                    <input type="email" placeholder="Enter your Email"><br><br>
+                    <label>WHAT YOU WANT?</label><br>
+                    <select>
+                        <option>COCONUT WATER</option>
+                        <option>COCONUT JUICE</option>
+                        <option>COCONUT SALAD</option>
+                        <option>COCONUT FRUIT</option>
+                        <option>COCONUT SWEER</option>
+                    </select><br><br>
+                    <label>ENTER PHONE NO.:</label><br>
+                    <input type="number" placeholder="Enter your Phone No."><br><br>
+                    <label>ENTER ADDRESS :</label><br>
+                    <textarea rows="3" cols="50" placeholder="Enter your current address"></textarea><br><br>
+                    <input type="submit" value="ORDER" onclick="display()">
+                    </form>
+                    <div class="icons">
+                    <a href="https://api.whatsapp.com/send?phone=+919848198566"><ion-icon id="whts" name="logo-whatsapp"></ion-icon></a>
+                    <ion-icon id="call" name="call-outline"></ion-icon>
+                    <ion-icon id="msg" name="chatbox-ellipses-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="availables">
+
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
